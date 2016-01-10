@@ -4,9 +4,23 @@
 <title>Calendar Directive Challenge</title>
 <link rel="stylesheet" type="text/css" href="./main.css" />
 </head>
-<body>
+<body ng-controller="mainCtrl">
 
 <!-- your code for nav and calendar directive instance here -->
+<nav class="nav">
+  <select>
+    <option></option>
+  </select>
+  <select>
+    <option></option>
+  </select>
+</nav>
+<div ng-repeat="day in date.days" class="calendar-container">
+  <div class="calendar-cell">
+    <p>{{ day.day }} box</p>
+  </div>
+</div>
+
 
 <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
