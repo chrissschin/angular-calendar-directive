@@ -38,6 +38,10 @@ body {
   height:200px;
 }
 
+.calendar-cell-grey {
+  background-color: grey;
+}
+
 .calendar-cell.outer {
   background:#eee;
 }

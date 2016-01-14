@@ -1,0 +1,18 @@
+<nav class="nav">
+  <select ng-model="monthSelected" ng-options="month as month for month in months" ng-change="dateChange(monthSelected, yearSelected)">
+  </select>
+
+  <select ng-model="yearSelected" ng-options="year as year for year in years"
+  ng-change="dateChange(monthSelected, yearSelected)">
+  </select>
+</nav>
+
+<!-- use something like item in date. look at the date object. find a way to attach the current month -->
+<div ng-repeat="day in date.days" class="calendar-cell" ng-class="day.month != currentMonth ? 'calendar-cell-grey' : '' ">
+  <div>
+    <p>{{ day.day }}</p>
+    <p>{{ day.month }} {{ currentMonth }}</p>
+  </div>
+</div>
+
+<!-- if day in date.month != currentDate.month set ng-class= calendar-cellell-grey -->
